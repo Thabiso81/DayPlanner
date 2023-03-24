@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root_view_layout_grey"
+    app:backgroundTint="@null"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/create_task_layout_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bvCreateTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="251dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/task_creation_icon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_margin="28dp"
+            android:width="120dp"
+            android:height="40dp"
+            android:fontFamily="@font/andika"
+            android:text="Create your task"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <EditText
+            android:id="@+id/etvTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:height="50dp"
+            android:fontFamily="@font/andika"
+            android:hint="Task name..."
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21dp" />
+
+        <EditText
+            android:id="@+id/etvTaskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:height="50dp"
+            android:fontFamily="@font/andika"
+            android:hint="Task description..."
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21dp" />
+
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:fontFamily="@font/andika"
+            android:hint="Complete by..."
+            android:inputType="date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bvCreateTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:width="180dp"
+        android:background="@drawable/add_task_button"
+        android:fontFamily="@font/andika_new_basic"
+        android:text="Create task"
+        android:textSize="19dp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
