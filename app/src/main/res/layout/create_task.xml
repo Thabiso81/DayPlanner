@@ -99,7 +99,7 @@
         android:width="180dp"
         android:background="@drawable/add_task_button"
         android:fontFamily="@font/andika_new_basic"
-        android:text="Create task"
+        android:text="@string/create_task_btn_label"
         android:textSize="19dp"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
