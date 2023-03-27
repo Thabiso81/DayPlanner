@@ -75,7 +75,7 @@
             android:width="120dp"
             android:height="0dp"
             android:fontFamily="@font/andika"
-            android:text="Tasks"
+            android:text="@string/task_textview_lable"
             android:textAlignment="center"
             android:textColor="@color/text_view_color"
             android:textSize="34dp" />
