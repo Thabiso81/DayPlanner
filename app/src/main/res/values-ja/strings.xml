@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Day Planner</string>
+    <string name="create_task_lable">Tasuku o sakusei suru</string>
+    <string name="task_name_hint">Tasuku-mei...</string>
+    <string name="task_description_hint">Tasuku no setsumei...</string>
+    <string name="complete_by_hint">Made ni kanryō...</string>
+    <string name="task_textview_lable">Tasuku</string>
+</resources>

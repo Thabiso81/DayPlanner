@@ -20,7 +20,7 @@ class MainActivity2 : AppCompatActivity() {
             val taskDescription: TextView = findViewById(R.id.etvTaskDescription)
             val taskName: TextView = findViewById(R.id.etvTaskName)
 
-            if (taskDescription.getText().toString().isEmpty() || taskName.getText().toString().isEmpty()){
+            if (taskDescription.text.toString().isEmpty() || taskName.text.toString().isEmpty()){
                 Toast.makeText(applicationContext, "Enter all fields.", Toast.LENGTH_LONG).show()
             } else {
                 val newTask = TaskModel(taskDescription = taskDescription.text.toString(),
