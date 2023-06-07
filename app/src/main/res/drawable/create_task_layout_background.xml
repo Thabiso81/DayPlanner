@@ -4,7 +4,7 @@
     <solid android:color="@color/recycler_view_grey" />
 
     <corners
-        android:bottomLeftRadius="40dp"
-        android:bottomRightRadius="40dp"/>
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"/>
 
 </shape>

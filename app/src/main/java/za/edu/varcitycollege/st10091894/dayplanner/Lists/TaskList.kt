@@ -1,4 +1,6 @@
-package za.edu.varcitycollege.st10091894.dayplanner
+package za.edu.varcitycollege.st10091894.dayplanner.Lists
+
+import za.edu.varcitycollege.st10091894.dayplanner.Models.TaskModel
 
 object TaskList {
     val taskList = mutableListOf<TaskModel>(

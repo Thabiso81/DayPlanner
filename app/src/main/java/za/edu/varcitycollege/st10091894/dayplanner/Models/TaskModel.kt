@@ -1,4 +1,4 @@
-package za.edu.varcitycollege.st10091894.dayplanner
+package za.edu.varcitycollege.st10091894.dayplanner.Models
 
 
 

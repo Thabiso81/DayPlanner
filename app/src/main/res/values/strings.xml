@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Day Planner</string>
+    <string name="app_name">TaskWiz</string>
     <string name="create_task_lable">Create your task</string>
     <string name="task_name_hint">Task name...</string>
     <string name="task_textview_label">Tasks</string>

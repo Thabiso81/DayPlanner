@@ -1,109 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/create_task_root_view_background"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/root_view_layout_grey"
-    app:backgroundTint="@null"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity2">
-
+    >
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="100dp"
-        android:layout_marginHorizontal="5dp"
-        android:background="@drawable/create_task_layout_background"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/bvCreateTask"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481">
-
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="251dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:src="@drawable/task_creation_icon" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:layout_margin="28dp"
-            android:width="120dp"
-            android:height="40dp"
-            android:fontFamily="@font/andika"
-            android:text="@string/create_task_lable"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="34sp" />
-
-        <EditText
-            android:id="@+id/etvTaskName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:height="50dp"
-            android:fontFamily="@font/andika"
-            android:hint="@string/task_name_hint"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textColorHint="@color/hint_color"
-            android:textSize="21dp" />
-
-        <EditText
-            android:id="@+id/etvTaskDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:height="50dp"
-            android:fontFamily="@font/andika"
-            android:hint="@string/task_description_hint"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textColorHint="@color/hint_color"
-            android:textSize="21dp" />
-
-
-        <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:ems="10"
-            android:fontFamily="@font/andika"
-            android:hint="@string/complete_by_hint"
-            android:inputType="date"
-            android:textColor="@color/white"
-            android:textColorHint="@color/hint_color"
-            android:textSize="21dp" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/bvCreateTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:width="180dp"
-        android:background="@drawable/add_task_button"
-        android:fontFamily="@font/andika_new_basic"
-        android:text="@string/create_task_btn_label"
-        android:textSize="19dp"
+        android:background="@color/create_task_root_view_background"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="vertical"
+        android:gravity="top"
+        tools:context=".MainActivity2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="@drawable/create_task_layout_background"
+            android:orientation="vertical"
+            >
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="251dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/task_creation_icon" />
+
+            <TextView
+                android:id="@+id/edtTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:width="120dp"
+                android:height="40dp"
+                android:gravity="bottom|center"
+                android:text="@string/create_task_lable"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/edit_text_color"
+                android:layout_marginBottom="40dp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <EditText
+                android:id="@+id/etvTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:height="50dp"
+                android:background="@drawable/view_background_edit_text"
+                android:padding="10dp"
+                android:hint="@string/task_name_hint"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="21dp" />
+
+
+            <EditText
+                android:id="@+id/edtTaskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:gravity="top|left"
+                android:height="50dp"
+                android:padding="10dp"
+                android:background="@drawable/view_background_edit_text"
+                android:hint="@string/task_description_hint"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="21dp" />
+
+            <EditText
+                android:id="@+id/edtCompletionDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:ems="10"
+                android:background="@drawable/view_background_edit_text"
+                android:hint="@string/complete_by_hint"
+                android:inputType="date"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="21dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bvCreateTask"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/add_task_button"
+            android:layout_gravity="center"
+            android:text="@string/create_task_btn_label"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+</ScrollView>

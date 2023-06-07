@@ -3,10 +3,9 @@ package za.edu.varcitycollege.st10091894.dayplanner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ActionMenuView
 import android.widget.Button
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import za.edu.varcitycollege.st10091894.dayplanner.Adapters.RecysclerViewAdapter
+import za.edu.varcitycollege.st10091894.dayplanner.Lists.TaskList
 import za.edu.varcitycollege.st10091894.dayplanner.databinding.ActivityMainBinding
 
 

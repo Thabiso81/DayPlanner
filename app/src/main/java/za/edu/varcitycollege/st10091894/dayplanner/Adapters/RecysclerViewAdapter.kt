@@ -1,13 +1,10 @@
-package za.edu.varcitycollege.st10091894.dayplanner
+package za.edu.varcitycollege.st10091894.dayplanner.Adapters
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import za.edu.varcitycollege.st10091894.dayplanner.Models.TaskModel
 import za.edu.varcitycollege.st10091894.dayplanner.databinding.RecyclerViewRowBinding
-import javax.net.ssl.SSLSessionBindingEvent
 
 class RecysclerViewAdapter(val taskList: List<TaskModel>):
 RecyclerView.Adapter<RecysclerViewAdapter.ViewHolder>() {
