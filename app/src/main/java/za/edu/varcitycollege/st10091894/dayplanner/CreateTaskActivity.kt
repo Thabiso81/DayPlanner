@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.WindowCompat
 import com.google.android.material.datepicker.MaterialDatePicker
 import za.edu.varcitycollege.st10091894.dayplanner.Lists.TaskList
 import za.edu.varcitycollege.st10091894.dayplanner.Models.TaskModel
@@ -23,11 +24,12 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_task)
-
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         val createTaskButton:Button = findViewById(R.id.bvCreateTask)
 
 
         createTaskButton.setOnClickListener() {
+            onBackPressed()
             edtTaskDescription = findViewById(R.id.edtTaskDescription)
             edtTaskName = findViewById(R.id.etvTaskName)
 

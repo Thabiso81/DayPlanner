@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="5dp"
-            android:background="@drawable/create_task_layout_background"
+            android:background="@drawable/layout_background_create_task"
             android:orientation="vertical"
             >
 
@@ -32,7 +32,7 @@
                 android:layout_width="251dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:src="@drawable/task_creation_icon" />
+                android:src="@drawable/ic_task_creation" />
 
             <TextView
                 android:id="@+id/edtTaskTitle"
@@ -108,7 +108,7 @@
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/add_task_button"
+            android:background="@drawable/view_background_add_task_button"
             android:layout_gravity="center"
             android:text="@string/create_task_btn_label"
             android:textColor="@color/white"
