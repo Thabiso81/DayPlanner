@@ -3,9 +3,9 @@ package za.edu.varcitycollege.st10091894.dayplanner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.WindowCompat
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -19,19 +19,22 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var edtTaskName: EditText
     private lateinit var edtTaskDescription: EditText
     private lateinit var edtTaskCompletionDate: EditText
+    private lateinit var btnCreateTask: Button
 
     private var taskCompletionDate: Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.create_task)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
-        val createTaskButton:Button = findViewById(R.id.bvCreateTask)
 
 
-        createTaskButton.setOnClickListener() {
-            onBackPressed()
-            edtTaskDescription = findViewById(R.id.edtTaskDescription)
-            edtTaskName = findViewById(R.id.etvTaskName)
+        btnCreateTask = findViewById(R.id.bvCreateTask)
+        edtTaskDescription = findViewById(R.id.edtTaskDescription)
+        edtTaskName = findViewById(R.id.etvTaskName)
+        edtTaskCompletionDate = findViewById(R.id.edtCompletionDate)
+
+        btnCreateTask.setOnClickListener() {
+
 
             if (edtTaskDescription.text.toString().isEmpty() || edtTaskName.text.toString().isEmpty()){
                 Toast.makeText(applicationContext, "Enter all fields.", Toast.LENGTH_LONG).show()
@@ -46,7 +49,7 @@ class MainActivity2 : AppCompatActivity() {
                 finish()
             }
 
-            edtTaskCompletionDate = findViewById(R.id.edtCompletionDate)
+
             edtTaskCompletionDate.setOnClickListener {
                 val datePicker =
                     MaterialDatePicker.Builder.datePicker()

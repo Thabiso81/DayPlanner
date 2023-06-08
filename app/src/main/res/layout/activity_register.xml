@@ -39,7 +39,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="110dp"
-
             android:background="@drawable/layout_background_login"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,6 +100,7 @@
                 android:fontFamily="sans-serif"
                 android:hint="example@email.com"
                 android:padding="10dp"
+                android:inputType="textWebEmailAddress"
                 android:textAlignment="textStart"
                 android:textColor="@color/white"
                 android:textColorHint="@color/hint_color"

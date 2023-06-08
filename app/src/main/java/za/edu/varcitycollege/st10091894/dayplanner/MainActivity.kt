@@ -3,6 +3,7 @@ package za.edu.varcitycollege.st10091894.dayplanner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Button
 import za.edu.varcitycollege.st10091894.dayplanner.Adapters.RecysclerViewAdapter
 import za.edu.varcitycollege.st10091894.dayplanner.Lists.TaskList
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         addTask.setOnClickListener() {
             val nextPage = Intent(this, MainActivity2::class.java)
             startActivity(nextPage)
-            finish()
+
         }
 
 
