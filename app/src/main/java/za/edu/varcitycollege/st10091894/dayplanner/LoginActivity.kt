@@ -48,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
         signupLink.setOnClickListener{
             val register = Intent(this, RegisterActivity::class.java)
             startActivity(register)
-            finish()
         }
         //Sign the user into the app
         loginButton.setOnClickListener(){
@@ -89,11 +88,11 @@ class LoginActivity : AppCompatActivity() {
         var isValid = true
         if (email.text.toString().isEmpty()){
             isValid = false
-            email.error = "Required"
+            email.setError("Required")
         }
         if (password.text.toString().isEmpty()){
             isValid = false
-            password.error = "Required"
+            password.setError("Required")
         }
 
 

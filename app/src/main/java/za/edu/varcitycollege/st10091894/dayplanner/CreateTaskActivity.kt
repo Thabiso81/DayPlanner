@@ -3,11 +3,9 @@ package za.edu.varcitycollege.st10091894.dayplanner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.core.view.WindowCompat
 import com.google.android.material.datepicker.MaterialDatePicker
 import za.edu.varcitycollege.st10091894.dayplanner.Lists.TaskList
 import za.edu.varcitycollege.st10091894.dayplanner.Models.TaskModel
@@ -36,11 +34,9 @@ class MainActivity2 : AppCompatActivity() {
         btnCreateTask.setOnClickListener() {
 
 
-            if (edtTaskDescription.text.toString().isEmpty() || edtTaskName.text.toString().isEmpty()){
-                Toast.makeText(applicationContext, "Enter all fields.", Toast.LENGTH_LONG).show()
-            } else {
+            if (inputValid(edtTaskName)) {
                 val newTask = TaskModel(taskDescription = edtTaskDescription.text.toString(),
-                    taskName = edtTaskName.text.toString())
+                    taskName = edtTaskName.text.toString(), taskDueDate = LocalDate.now())
 
                 TaskList.taskList.add(newTask)
 
@@ -71,5 +67,17 @@ class MainActivity2 : AppCompatActivity() {
                 }
             }
         }
+
+
     }
+    fun inputValid(taskNmae: EditText): Boolean{
+        var isValid = true
+        if (taskNmae.text.toString().isEmpty()){
+            isValid = false
+            Toast.makeText(applicationContext, "Enter a task name", Toast.LENGTH_LONG).show()
+        }
+
+        return isValid
+    }
+
 }

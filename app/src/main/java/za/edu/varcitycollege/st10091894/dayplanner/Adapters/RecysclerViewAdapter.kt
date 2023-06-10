@@ -1,5 +1,6 @@
 package za.edu.varcitycollege.st10091894.dayplanner.Adapters
 
+import android.databinding.tool.util.StringUtils.capitalize
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ RecyclerView.Adapter<RecysclerViewAdapter.ViewHolder>() {
         fun bindItem(taskModel: TaskModel){
             itemBinding.tvTaskName.text = taskModel.taskName
             itemBinding.tvTaskDescription.text = taskModel.taskDescription
+            itemBinding.tvTaskDueDate.text = "Due on ${taskModel.taskDueDate.dayOfMonth} ${capitalize(taskModel.taskDueDate.month.toString())}"
 
         }
     }
